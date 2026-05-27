@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="jigar.css">
+<link rel="stylesheet" href="product.html">
+<title>TimeMaster Watches</title>
+</head>
+<body>
+<header>
+  <h1>TimeMaster Watches</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="toggle.html">Products</a>
+    <a href="more.html">About</a>
+    <a href="velidation.html">Enquiry</a>
+    <a href="showxml.html">more Watch information</a>
+    <a href="jsn.html">json</a>
+     
+  </nav>
+</header>
+<!-- Home Section -->
+<section id="home">
+  <h2>Welcome to TimeMaster Watches</h2>
+  <p>Premium watches for luxury, sport, smart, and casual styles. Browse our collection below.</p>
+  <div class="search-bar">
+    <input type="text" placeholder="Search products..." id="searchInput">
+    <button onclick="searchProducts()">Search</button>
+  </div>
+</section>
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Info</h2>
+  <p>Email: support@timemaster.com</p>
+  <p>Phone: +91 9876543210</p>
+  <p>Address: 123 Watch Street, Mumbai, India</p>
+</section>
+<footer>
+  <p>&copy; 2026 TimeMaster Watches. All rights reserved.</p>
+</footer>
+<script>
+function filterProducts(category) {
+  const buttons = document.querySelectorAll('.filter-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  const products = document.querySelectorAll('.product');
+  products.forEach(prod => {
+    if(category === 'all' || prod.getAttribute('data-category') === category) prod.style.display='block';
+    else prod.style.display='none';
+  });
+}
+function searchProducts() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const products = document.querySelectorAll('.product');
+  products.forEach(prod => {
+    const name = prod.querySelector('h3').textContent.toLowerCase();
+    prod.style.display = name.includes(input) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Watch World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body{
+    background:#f4f6f9;
+}
+/* Watch Sections */
+.Luxury,.Sports,.Smart,.Digital{
+    display:none;
+    padding:30px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.Luxury{background:black;color:white;}
+.Sports{background:darkred;color:white;}
+.Smart{background:green;color:white;}
+.Digital{background:darkblue;color:white;}
+
+.card{
+    margin-top:20px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:15px;
+    text-align:center;
+    margin-top:30px;
+}
+
+</style>
+
+<script>
+$(document).ready(function(){
+
+    $("#luxBtn").click(function(){
+        $(".Luxury").slideToggle();
+    });
+    $("#sportBtn").click(function(){
+        $(".Sports").slideToggle();
+    });
+    $("#smartBtn").click(function(){
+        $(".Smart").slideToggle();
+    });
+    $("#digitalBtn").click(function(){
+        $(".Digital").slideToggle();
+    });
+});
+</script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<!-- Main Content -->
+<div class="col-md-10">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span class="navbar-brand">Premium Watch Collection</span>
+</nav>
+<div class="container mt-4">
+<div class="text-center">
+    <button id="luxBtn" class="btn btn-dark">Luxury</button>
+    <button id="sportBtn" class="btn btn-danger">Sports</button>
+    <button id="smartBtn" class="btn btn-success">Smart</button>
+    <button id="digitalBtn" class="btn btn-primary">Digital</button>
+</div>
+<!-- Luxury Section -->
+<div class="Luxury">
+    <h3>Luxury Watches</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="rolex.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Rolex Classic</h5>
+                    <p>17500</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sports Section -->
+<div class="Sports">
+    <h3>Sports Watches</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="gshok.jpeg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Casio G-Shock</h5>
+                    <p>2250</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Smart Section -->
+<div class="Smart">
+    <h3>Smart Watches</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="smart.jpeg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Apple Watch</h5>
+                    <p>3500</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Digital Section -->
+<div class="D8igital">
+    <h3>Digital Watches</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="rado.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Timex Digital</h5>
+                    <p>4000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="jquery.js"></script>
+</body>
+</html>

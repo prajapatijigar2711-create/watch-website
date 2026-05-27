@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Watch Website</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+background:#f4f4f4;
+}
+
+button{
+padding:10px 20px;
+background:#000;
+color:white;
+border:none;
+cursor:pointer;
+margin:20px;
+}
+
+button:hover{
+background:#444;
+}
+
+#watchList{
+width:400px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:15px;
+margin:10px;
+border-radius:5px;
+box-shadow:0 0 5px gray;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Watch Collection</h2>
+
+<button onclick="showWatches()">Show Watches</button>
+
+<div id="watchList"></div>
+
+<script>
+
+let watches = {
+"watches":[
+{"name":"Rolex Submariner","brand":"Rolex","price":8500},
+{"name":"Apple Watch","brand":"Apple","price":399},
+{"name":"Casio G-Shock","brand":"Casio","price":150},
+{"name":"Titan Classic","brand":"Titan","price":120}
+]
+};
+
+function showWatches(){
+
+let output="";
+
+watches.watches.forEach(function(watch){
+
+output += "<div class='card'>";
+output += "<h3>"+watch.name+"</h3>";
+output += "<p>Brand: "+watch.brand+"</p>";
+output += "<p>Price: $"+watch.price+"</p>";
+output += "</div>";
+
+});
+
+document.getElementById("watchList").innerHTML = output;
+
+}
+
+</script>
+
+</body>
+</html>

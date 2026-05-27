@@ -1,0 +1,25 @@
+
+* { box-sizing: border-box; margin:0; padding:0; font-family: Arial, sans-serif; }
+body { background:#111; color:#f5f5f5; line-height:1.6; scroll-behavior: smooth; }
+header { padding:20px; text-align:center; background:#222; position:sticky; top:0; z-index:100; }
+header h1 { color:#d4af37; }
+nav a { color:#f5f5f5; text-decoration:none; margin:0 15px; font-weight:bold; }
+nav a:hover { color:#d4af37; }
+.search-bar { text-align:center; margin:20px 0; }
+.search-bar input[type="text"] { padding:10px; width:60%; border-radius:5px; border:none; }
+.search-bar button { padding:10px 20px; border:none; background:#d4af37; color:#111; cursor:pointer; border-radius:5px; }
+.filters { text-align:center; margin-bottom:20px; }
+.filters button { padding:10px 15px; margin:5px; border:none; border-radius:5px; cursor:pointer; background:#333; color:#f5f5f5; }
+.filters button.active { background:#d4af37; color:#111; }
+section { padding:60px 20px; text-align:center; }
+section h2 { margin-bottom:20px; color:#d4af37; }
+.gallery { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap:15px; padding:20px; }
+.product { background:#222; padding:10px; border-radius:10px; text-align:center; }
+.product img { width:100%; border-radius:10px; }
+.product h3 { margin:10px 0 5px; font-size:16px; }
+.product p { font-size:12px; color:#aaa; }
+.contact-box { background:#222; max-width:500px; margin:0 auto; padding:30px; border-radius:15px; box-shadow: 0 0 20px rgba(212,175,55,0.5); }
+input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:none; }
+button.submit { background:#d4af37; color:#111; padding:10px 20px; border-radius:5px; cursor:pointer; border:none; font-weight:bold; transition:0.3s; }
+button.submit:hover { background:#b08b2e; }
+footer { padding:20px; background:#222; margin-top:40px; }

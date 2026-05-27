@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="jigar.css">
+<title>Enquiry Form</title>
+
+<style>
+
+button{
+padding:10px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<section id="enquiry">
+<h2>Make an Enquiry</h2>
+
+<div class="contact-box">
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<input type="text" id="subject" placeholder="Subject">
+<textarea id="message" placeholder="Your Message" rows="5"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+</section>
+
+<script>
+
+function validateForm(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let subject = document.getElementById("subject").value;
+let message = document.getElementById("message").value;
+
+if(name == ""){
+alert("Please enter your name");
+return false;
+}
+
+if(email == ""){
+alert("Please enter your email");
+return false;
+}
+
+/* Email validation */
+if(email.indexOf("@") == -1 || email.indexOf(".") == -1){
+alert("Enter valid email (must contain @ and .)");
+return false;
+}
+
+if(subject == ""){
+alert("Please enter subject");
+return false;
+}
+
+if(message == ""){
+alert("Please enter message");
+return false;
+}
+
+alert("Form submitted successfully");
+return true;
+
+}
+
+</script>
+</body>
+</html>
